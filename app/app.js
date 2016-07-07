@@ -4,4 +4,6 @@ app.controller('MainAppCtrl', ['$scope', function ($scope) {
     $scope.double = function (val) {
         return val * 2;
     };
+
+    $scope.productname="hello";
 }]);
