@@ -11,7 +11,6 @@ app.controller('MainAppCtrl', ['$scope', 'notify', function ($scope, notify) {
         notify(params);
     };
 
-    $scope.customer = { "name": 'lxf', 'address': 'ShangHai' };
     $scope.checked = true;
 }]).
     factory('notify', ['$window', function (win) {
@@ -23,9 +22,4 @@ app.controller('MainAppCtrl', ['$scope', 'notify', function ($scope, notify) {
                 msgs = [];
             }
         };
-    }]).
-    directive('myCustomer', function () {
-        return {
-            template: 'Name:{{customer.name}},address:{{customer.address}}'
-        };
-    })
+    }]);

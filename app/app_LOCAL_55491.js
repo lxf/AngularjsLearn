@@ -12,7 +12,6 @@ app.controller('MainAppCtrl', ['$scope', 'notify', function ($scope, notify) {
     };
 
     $scope.customer = { "name": 'lxf', 'address': 'ShangHai' };
-    $scope.checked = true;
 }]).
     factory('notify', ['$window', function (win) {
         var msgs = [];
