@@ -1,5 +1,5 @@
 ////// <reference path="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" />
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngAnimate']);
 app.controller('MainAppCtrl', ['$scope', 'notify', function ($scope, notify) {
     $scope.double = function (val) {
         return val * 2;
@@ -12,6 +12,9 @@ app.controller('MainAppCtrl', ['$scope', 'notify', function ($scope, notify) {
     };
 
     $scope.checked = true;
+
+    $scope.items=['settings','home','other'];
+    $scope.selection=$scope.items[0];
 }]).
     factory('notify', ['$window', function (win) {
         var msgs = [];
