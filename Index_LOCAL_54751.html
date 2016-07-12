@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+</head>
+
+<body ng-app="app" ng-controller="MainAppCtrl">
+    <section>
+        <input type="text" ng-model="num" /> {{double(num)}}
+    </section>
+
+    <section>
+        <input ng-init="message='输入你要发送的内容'" ng-model="message" />
+        <button ng-click="callNotify(message)">Send</button>
+    </section>
+
+    <section>
+        <div my-Customer>
+        </div>
+    </section>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="app/app.js" /></script>
+</body>
+
+</html>
