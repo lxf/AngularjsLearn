@@ -1,5 +1,5 @@
 ////// <reference path="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js" />
-var app = angular.module('app', []);
+var app = angular.module('app', ['ngAnimate']);
 app.controller('MainAppCtrl', ['$scope', 'notify', function ($scope, notify) {
     $scope.double = function (val) {
         return val * 2;
@@ -11,17 +11,17 @@ app.controller('MainAppCtrl', ['$scope', 'notify', function ($scope, notify) {
         notify(params);
     };
 
-<<<<<<< HEAD
     $scope.customer = { "name": 'lxf', 'address': 'ShangHai' };
-=======
     $scope.checked = true;
->>>>>>> 078449dc3919352a8a61ac7a030a63c44e762838
+
+    $scope.items = ['settings', 'home', 'other'];
+    $scope.selection = $scope.items[0];
 }]).
     factory('notify', ['$window', function (win) {
         var msgs = [];
         return function (msg) {
             msgs.push(msg);
-            if (msgs != undefined && msgs.length == 3) {
+            if (msgs !== undefined && msgs.length === 3) {
                 win.alert(msgs.join('\n'));
                 msgs = [];
             }
@@ -31,4 +31,4 @@ app.controller('MainAppCtrl', ['$scope', 'notify', function ($scope, notify) {
         return {
             template: 'Name:{{customer.name}},address:{{customer.address}}'
         };
-    })
+    });
